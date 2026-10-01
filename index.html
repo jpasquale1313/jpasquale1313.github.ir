@@ -4,32 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joe Pasquale – Portfolio</title>
+
     <style>
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
-            background: #f5f7fa;
-            color: #222;
+            background: #0d0d0d;
+            color: #f2f2f2;
+        }
+
+        /* Ferrari color palette */
+        :root {
+            --ferrari-red: #d40000;
+            --ferrari-dark: #0d0d0d;
+            --ferrari-gray: #1a1a1a;
+            --accent: #ff1a1a;
         }
 
         header {
-            background: linear-gradient(135deg, #0033ff, #00c2ff);
-            color: white;
+            background: var(--ferrari-red);
             padding: 60px 20px;
             text-align: center;
+            color: white;
         }
 
-        header h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
+        .headshot-container {
+            margin-top: -80px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .headshot-container img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 6px solid var(--ferrari-dark);
+            object-fit: cover;
+            background: #333;
+        }
+
+        .intro-text {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .intro-text h1 {
+            font-size: 40px;
+            margin-bottom: 5px;
             font-weight: 700;
         }
 
-        header p {
+        .intro-text p {
             font-size: 18px;
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .links {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .links a {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 22px;
+            background: var(--ferrari-gray);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .links a:hover {
+            background: var(--accent);
         }
 
         section {
@@ -41,7 +89,7 @@
         h2 {
             font-size: 32px;
             margin-bottom: 20px;
-            color: #0033ff;
+            color: var(--accent);
         }
 
         .skills-container {
@@ -51,17 +99,17 @@
         }
 
         .skill-group {
-            background: white;
+            background: var(--ferrari-gray);
             padding: 20px;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             flex: 1;
             min-width: 250px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
         }
 
         .skill-group h3 {
             margin-bottom: 10px;
-            color: #0055ff;
+            color: var(--ferrari-red);
         }
 
         .skill-group ul {
@@ -75,39 +123,54 @@
         }
 
         .project {
-            background: white;
+            background: var(--ferrari-gray);
             padding: 25px;
             border-radius: 12px;
             margin-bottom: 25px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
         }
 
         .project h3 {
             margin-bottom: 10px;
-            color: #0055ff;
-        }
-
-        .project p {
-            line-height: 1.6;
+            color: var(--ferrari-red);
         }
 
         footer {
             text-align: center;
             padding: 30px;
-            background: #e9eef5;
+            background: #111;
             margin-top: 40px;
             font-size: 14px;
+            color: #bbb;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Joe Pasquale</h1>
+    <div class="headshot-container">
+        <!-- Replace "headshot.jpg" with your actual file name -->
+        <img src="professionalimage.jpg" alt="Joe Pasquale Headshot">
+    </div>
+
+    <div class="intro-text">
+        <h1>Joe Pasquale</h1>
+        <p>Rutgers Business School • Class of 2029</p>
+    </div>
+
+    <div class="links">
+        <a href="https://www.linkedin.com/in/joseph-pasquale-3141222b1" target="_blank">LinkedIn</a>
+        <!-- Replace resume.pdf with your actual file name -->
+        <a href="resume.pdf" target="_blank">Download Resume</a>
+    </div>
+</header>
+
+<section>
+    <h2>Personal Statement</h2>
     <p>
         “Motivated and passionate student in the Rutgers Business School. Currently pursuing degrees in supply chain and BAIT. Expecting to graduate in May 2029. Hardworking and driven, with a desire to learn and succeed in the business field. Committed to working hard and serving my school, peers, employers, and community.”
     </p>
-</header>
+</section>
 
 <section>
     <h2>Skills</h2>
@@ -152,7 +215,7 @@
         <h3>Haptic VR Vest</h3>
         <p>
             Designed and built a homemade haptic VR vest integrating Python-based control logic and mechanical troubleshooting. 
-            The project focused on immersive feedback systems and custom hardware-software interaction.
+            Developed as part of a senior capstone project, combining hardware engineering and software development.
         </p>
     </div>
 
